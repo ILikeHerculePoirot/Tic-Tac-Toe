@@ -1,95 +1,95 @@
 while True:
-    grid=[['-','-','-'],['-','-','-'],['-','-','-']]
+    g=[['-','-','-'],['-','-','-'],['-','-','-']]
     while True:
         while True:
-            move=int(input())
-            if move==1 and grid[0][0]=='-':grid[0][0]='X';break
-            if move==2 and grid[0][1]=='-':grid[0][1]='X';break
-            if move==3 and grid[0][2]=='-':grid[0][2]='X';break
-            if move==4 and grid[1][0]=='-':grid[1][0]='X';break
-            if move==5 and grid[1][1]=='-':grid[1][1]='X';break
-            if move==6 and grid[1][2]=='-':grid[1][2]='X';break
-            if move==7 and grid[2][0]=='-':grid[2][0]='X';break
-            if move==8 and grid[2][1]=='-':grid[2][1]='X';break
-            if move==9 and grid[2][2]=='-':grid[2][2]='X';break
-        if grid[0][0]==grid[0][1]==grid[0][2] and grid[0][0]=='X':print(grid[0][0],end=' ');print(grid[0][1],end=' ');print(grid[0][2]);print(grid[1][0],end=' ');print(grid[1][1],end=' ');print(grid[1][2]);print(grid[2][0],end=' ');print(grid[2][1],end=' ');print(grid[2][2]);print('You won');break
-        elif grid[1][0]==grid[1][1]==grid[1][2] and grid[1][0]=='X':print(grid[0][0],end=' ');print(grid[0][1],end=' ');print(grid[0][2]);print(grid[1][0],end=' ');print(grid[1][1],end=' ');print(grid[1][2]);print(grid[2][0],end=' ');print(grid[2][1],end=' ');print(grid[2][2]);print('You won');break
-        elif grid[2][0]==grid[2][1]==grid[2][2] and grid[2][0]=='X':print(grid[0][0],end=' ');print(grid[0][1],end=' ');print(grid[0][2]);print(grid[1][0],end=' ');print(grid[1][1],end=' ');print(grid[1][2]);print(grid[2][0],end=' ');print(grid[2][1],end=' ');print(grid[2][2]);print('You won');break
-        elif grid[0][0]==grid[1][0]==grid[2][0] and grid[0][0]=='X':print(grid[0][0],end=' ');print(grid[0][1],end=' ');print(grid[0][2]);print(grid[1][0],end=' ');print(grid[1][1],end=' ');print(grid[1][2]);print(grid[2][0],end=' ');print(grid[2][1],end=' ');print(grid[2][2]);print('You won');break
-        elif grid[0][1]==grid[1][1]==grid[2][1] and grid[0][1]=='X':print(grid[0][0],end=' ');print(grid[0][1],end=' ');print(grid[0][2]);print(grid[1][0],end=' ');print(grid[1][1],end=' ');print(grid[1][2]);print(grid[2][0],end=' ');print(grid[2][1],end=' ');print(grid[2][2]);print('You won');break
-        elif grid[0][2]==grid[1][2]==grid[2][2] and grid[0][2]=='X':print(grid[0][0],end=' ');print(grid[0][1],end=' ');print(grid[0][2]);print(grid[1][0],end=' ');print(grid[1][1],end=' ');print(grid[1][2]);print(grid[2][0],end=' ');print(grid[2][1],end=' ');print(grid[2][2]);print('You won');break
-        elif grid[0][0]==grid[1][1]==grid[2][2] and grid[0][0]=='X':print(grid[0][0],end=' ');print(grid[0][1],end=' ');print(grid[0][2]);print(grid[1][0],end=' ');print(grid[1][1],end=' ');print(grid[1][2]);print(grid[2][0],end=' ');print(grid[2][1],end=' ');print(grid[2][2]);print('You won');break
-        elif grid[2][0]==grid[1][1]==grid[0][2] and grid[2][0]=='X':print(grid[0][0],end=' ');print(grid[0][1],end=' ');print(grid[0][2]);print(grid[1][0],end=' ');print(grid[1][1],end=' ');print(grid[1][2]);print(grid[2][0],end=' ');print(grid[2][1],end=' ');print(grid[2][2]);print('You won');break
-        elif grid[0].count('-')==0 and grid[1].count('-')==0 and grid[2].count('-')==0:print(grid[0][0],end=' ');print(grid[0][1],end=' ');print(grid[0][2]);print(grid[1][0],end=' ');print(grid[1][1],end=' ');print(grid[1][2]);print(grid[2][0],end=' ');print(grid[2][1],end=' ');print(grid[2][2]);print('Draw');break
-        while grid[0].count('-')+grid[1].count('-')+grid[2].count('-')!=0:
-            if grid[0][0]==grid[0][1] and grid[0][0]=='O' and grid[0][2]=='-':grid[0][2]='O';break
-            elif grid[0][0]==grid[0][2] and grid[0][0]=='O' and grid[0][1]=='-':grid[0][1]='O';break
-            elif grid[0][1]==grid[0][2] and grid[0][1]=='O' and grid[0][0]=='-':grid[0][0]='O';break
-            elif grid[1][0]==grid[1][1] and grid[1][0]=='O' and grid[1][2]=='-':grid[1][2]='O';break
-            elif grid[1][0]==grid[1][2] and grid[1][0]=='O' and grid[1][1]=='-':grid[1][1]='O';break
-            elif grid[1][1]==grid[1][2] and grid[1][1]=='O' and grid[1][0]=='-':grid[1][0]='O';break
-            elif grid[2][0]==grid[2][1] and grid[2][0]=='O' and grid[2][2]=='-':grid[2][2]='O';break
-            elif grid[2][0]==grid[2][2] and grid[2][0]=='O' and grid[2][1]=='-':grid[2][1]='O';break
-            elif grid[2][1]==grid[2][2] and grid[2][1]=='O' and grid[2][0]=='-':grid[2][0]='O';break
-            elif grid[0][0]==grid[1][0] and grid[0][0]=='O' and grid[2][0]=='-':grid[2][0]='O';break
-            elif grid[0][0]==grid[2][0] and grid[0][0]=='O' and grid[1][0]=='-':grid[1][0]='O';break
-            elif grid[1][0]==grid[2][0] and grid[1][0]=='O' and grid[0][0]=='-':grid[0][0]='O';break
-            elif grid[0][1]==grid[1][1] and grid[0][1]=='O' and grid[2][1]=='-':grid[2][1]='O';break
-            elif grid[0][1]==grid[2][1] and grid[0][1]=='O' and grid[1][1]=='-':grid[1][1]='O';break
-            elif grid[1][1]==grid[2][1] and grid[1][1]=='O' and grid[0][1]=='-':grid[0][1]='O';break
-            elif grid[0][2]==grid[1][2] and grid[0][2]=='O' and grid[2][2]=='-':grid[2][2]='O';break
-            elif grid[0][2]==grid[2][2] and grid[0][2]=='O' and grid[1][2]=='-':grid[1][2]='O';break
-            elif grid[1][2]==grid[2][2] and grid[1][2]=='O' and grid[0][2]=='-':grid[0][2]='O';break
-            elif grid[0][0]==grid[1][1] and grid[0][0]=='O' and grid[2][2]=='-':grid[2][2]='O';break
-            elif grid[0][0]==grid[2][2] and grid[0][0]=='O' and grid[1][1]=='-':grid[1][1]='O';break
-            elif grid[1][1]==grid[2][2] and grid[1][1]=='O' and grid[0][0]=='-':grid[0][0]='O';break
-            elif grid[0][2]==grid[1][1] and grid[0][2]=='O' and grid[2][0]=='-':grid[2][0]='O';break
-            elif grid[0][2]==grid[2][0] and grid[0][2]=='O' and grid[1][1]=='-':grid[1][1]='O';break
-            elif grid[1][1]==grid[2][0] and grid[1][1]=='O' and grid[0][2]=='-':grid[0][2]='O';break
-            elif grid[0][0]==grid[0][1] and grid[0][0]=='X' and grid[0][2]=='-':grid[0][2]='O';break
-            elif grid[0][0]==grid[0][2] and grid[0][0]=='X' and grid[0][1]=='-':grid[0][1]='O';break
-            elif grid[0][1]==grid[0][2] and grid[0][1]=='X' and grid[0][0]=='-':grid[0][0]='O';break
-            elif grid[1][0]==grid[1][1] and grid[1][0]=='X' and grid[1][2]=='-':grid[1][2]='O';break
-            elif grid[1][0]==grid[1][2] and grid[1][0]=='X' and grid[1][1]=='-':grid[1][1]='O';break
-            elif grid[1][1]==grid[1][2] and grid[1][1]=='X' and grid[1][0]=='-':grid[1][0]='O';break
-            elif grid[2][0]==grid[2][1] and grid[2][0]=='X' and grid[2][2]=='-':grid[2][2]='O';break
-            elif grid[2][0]==grid[2][2] and grid[2][0]=='X' and grid[2][1]=='-':grid[2][1]='O';break
-            elif grid[2][1]==grid[2][2] and grid[2][1]=='X' and grid[2][0]=='-':grid[2][0]='O';break
-            elif grid[0][0]==grid[1][0] and grid[0][0]=='X' and grid[2][0]=='-':grid[2][0]='O';break
-            elif grid[0][0]==grid[2][0] and grid[0][0]=='X' and grid[1][0]=='-':grid[1][0]='O';break
-            elif grid[1][0]==grid[2][0] and grid[1][0]=='X' and grid[0][0]=='-':grid[0][0]='O';break
-            elif grid[0][1]==grid[1][1] and grid[0][1]=='X' and grid[2][1]=='-':grid[2][1]='O';break
-            elif grid[0][1]==grid[2][1] and grid[0][1]=='X' and grid[1][1]=='-':grid[1][1]='O';break
-            elif grid[1][1]==grid[2][1] and grid[1][1]=='X' and grid[0][1]=='-':grid[0][1]='O';break
-            elif grid[0][2]==grid[1][2] and grid[0][2]=='X' and grid[2][2]=='-':grid[2][2]='O';break
-            elif grid[0][2]==grid[2][2] and grid[0][2]=='X' and grid[1][2]=='-':grid[1][2]='O';break
-            elif grid[1][2]==grid[2][2] and grid[1][2]=='X' and grid[0][2]=='-':grid[0][2]='O';break
-            elif grid[0][0]==grid[1][1] and grid[0][0]=='X' and grid[2][2]=='-':grid[2][2]='O';break
-            elif grid[0][0]==grid[2][2] and grid[0][0]=='X' and grid[1][1]=='-':grid[1][1]='O';break
-            elif grid[1][1]==grid[2][2] and grid[1][1]=='X' and grid[0][0]=='-':grid[0][0]='O';break
-            elif grid[0][2]==grid[1][1] and grid[0][2]=='X' and grid[2][0]=='-':grid[2][0]='O';break
-            elif grid[0][2]==grid[2][0] and grid[0][2]=='X' and grid[1][1]=='-':grid[1][1]='O';break
-            elif grid[1][1]==grid[2][0] and grid[1][1]=='X' and grid[0][2]=='-':grid[0][2]='O';break
+            m=int(input())
+            if m==1 and g[0][0]=='-':g[0][0]='X';break
+            if m==2 and g[0][1]=='-':g[0][1]='X';break
+            if m==3 and g[0][2]=='-':g[0][2]='X';break
+            if m==4 and g[1][0]=='-':g[1][0]='X';break
+            if m==5 and g[1][1]=='-':g[1][1]='X';break
+            if m==6 and g[1][2]=='-':g[1][2]='X';break
+            if m==7 and g[2][0]=='-':g[2][0]='X';break
+            if m==8 and g[2][1]=='-':g[2][1]='X';break
+            if m==9 and g[2][2]=='-':g[2][2]='X';break
+        if g[0][0]==g[0][1]==g[0][2] and g[0][0]=='X':print(g[0][0],end=' ');print(g[0][1],end=' ');print(g[0][2]);print(g[1][0],end=' ');print(g[1][1],end=' ');print(g[1][2]);print(g[2][0],end=' ');print(g[2][1],end=' ');print(g[2][2]);print('Win');break
+        elif g[1][0]==g[1][1]==g[1][2] and g[1][0]=='X':print(g[0][0],end=' ');print(g[0][1],end=' ');print(g[0][2]);print(g[1][0],end=' ');print(g[1][1],end=' ');print(g[1][2]);print(g[2][0],end=' ');print(g[2][1],end=' ');print(g[2][2]);print('Win');break
+        elif g[2][0]==g[2][1]==g[2][2] and g[2][0]=='X':print(g[0][0],end=' ');print(g[0][1],end=' ');print(g[0][2]);print(g[1][0],end=' ');print(g[1][1],end=' ');print(g[1][2]);print(g[2][0],end=' ');print(g[2][1],end=' ');print(g[2][2]);print('Win');break
+        elif g[0][0]==g[1][0]==g[2][0] and g[0][0]=='X':print(g[0][0],end=' ');print(g[0][1],end=' ');print(g[0][2]);print(g[1][0],end=' ');print(g[1][1],end=' ');print(g[1][2]);print(g[2][0],end=' ');print(g[2][1],end=' ');print(g[2][2]);print('Win');break
+        elif g[0][1]==g[1][1]==g[2][1] and g[0][1]=='X':print(g[0][0],end=' ');print(g[0][1],end=' ');print(g[0][2]);print(g[1][0],end=' ');print(g[1][1],end=' ');print(g[1][2]);print(g[2][0],end=' ');print(g[2][1],end=' ');print(g[2][2]);print('Win');break
+        elif g[0][2]==g[1][2]==g[2][2] and g[0][2]=='X':print(g[0][0],end=' ');print(g[0][1],end=' ');print(g[0][2]);print(g[1][0],end=' ');print(g[1][1],end=' ');print(g[1][2]);print(g[2][0],end=' ');print(g[2][1],end=' ');print(g[2][2]);print('Win');break
+        elif g[0][0]==g[1][1]==g[2][2] and g[0][0]=='X':print(g[0][0],end=' ');print(g[0][1],end=' ');print(g[0][2]);print(g[1][0],end=' ');print(g[1][1],end=' ');print(g[1][2]);print(g[2][0],end=' ');print(g[2][1],end=' ');print(g[2][2]);print('Win');break
+        elif g[2][0]==g[1][1]==g[0][2] and g[2][0]=='X':print(g[0][0],end=' ');print(g[0][1],end=' ');print(g[0][2]);print(g[1][0],end=' ');print(g[1][1],end=' ');print(g[1][2]);print(g[2][0],end=' ');print(g[2][1],end=' ');print(g[2][2]);print('Win');break
+        elif g[0].count('-')==0 and g[1].count('-')==0 and g[2].count('-')==0:print(g[0][0],end=' ');print(g[0][1],end=' ');print(g[0][2]);print(g[1][0],end=' ');print(g[1][1],end=' ');print(g[1][2]);print(g[2][0],end=' ');print(g[2][1],end=' ');print(g[2][2]);print('Draw');break
+        while g[0].count('-')+g[1].count('-')+g[2].count('-')!=0:
+            if g[0][0]==g[0][1] and g[0][0]=='O' and g[0][2]=='-':g[0][2]='O';break
+            elif g[0][0]==g[0][2] and g[0][0]=='O' and g[0][1]=='-':g[0][1]='O';break
+            elif g[0][1]==g[0][2] and g[0][1]=='O' and g[0][0]=='-':g[0][0]='O';break
+            elif g[1][0]==g[1][1] and g[1][0]=='O' and g[1][2]=='-':g[1][2]='O';break
+            elif g[1][0]==g[1][2] and g[1][0]=='O' and g[1][1]=='-':g[1][1]='O';break
+            elif g[1][1]==g[1][2] and g[1][1]=='O' and g[1][0]=='-':g[1][0]='O';break
+            elif g[2][0]==g[2][1] and g[2][0]=='O' and g[2][2]=='-':g[2][2]='O';break
+            elif g[2][0]==g[2][2] and g[2][0]=='O' and g[2][1]=='-':g[2][1]='O';break
+            elif g[2][1]==g[2][2] and g[2][1]=='O' and g[2][0]=='-':g[2][0]='O';break
+            elif g[0][0]==g[1][0] and g[0][0]=='O' and g[2][0]=='-':g[2][0]='O';break
+            elif g[0][0]==g[2][0] and g[0][0]=='O' and g[1][0]=='-':g[1][0]='O';break
+            elif g[1][0]==g[2][0] and g[1][0]=='O' and g[0][0]=='-':g[0][0]='O';break
+            elif g[0][1]==g[1][1] and g[0][1]=='O' and g[2][1]=='-':g[2][1]='O';break
+            elif g[0][1]==g[2][1] and g[0][1]=='O' and g[1][1]=='-':g[1][1]='O';break
+            elif g[1][1]==g[2][1] and g[1][1]=='O' and g[0][1]=='-':g[0][1]='O';break
+            elif g[0][2]==g[1][2] and g[0][2]=='O' and g[2][2]=='-':g[2][2]='O';break
+            elif g[0][2]==g[2][2] and g[0][2]=='O' and g[1][2]=='-':g[1][2]='O';break
+            elif g[1][2]==g[2][2] and g[1][2]=='O' and g[0][2]=='-':g[0][2]='O';break
+            elif g[0][0]==g[1][1] and g[0][0]=='O' and g[2][2]=='-':g[2][2]='O';break
+            elif g[0][0]==g[2][2] and g[0][0]=='O' and g[1][1]=='-':g[1][1]='O';break
+            elif g[1][1]==g[2][2] and g[1][1]=='O' and g[0][0]=='-':g[0][0]='O';break
+            elif g[0][2]==g[1][1] and g[0][2]=='O' and g[2][0]=='-':g[2][0]='O';break
+            elif g[0][2]==g[2][0] and g[0][2]=='O' and g[1][1]=='-':g[1][1]='O';break
+            elif g[1][1]==g[2][0] and g[1][1]=='O' and g[0][2]=='-':g[0][2]='O';break
+            elif g[0][0]==g[0][1] and g[0][0]=='X' and g[0][2]=='-':g[0][2]='O';break
+            elif g[0][0]==g[0][2] and g[0][0]=='X' and g[0][1]=='-':g[0][1]='O';break
+            elif g[0][1]==g[0][2] and g[0][1]=='X' and g[0][0]=='-':g[0][0]='O';break
+            elif g[1][0]==g[1][1] and g[1][0]=='X' and g[1][2]=='-':g[1][2]='O';break
+            elif g[1][0]==g[1][2] and g[1][0]=='X' and g[1][1]=='-':g[1][1]='O';break
+            elif g[1][1]==g[1][2] and g[1][1]=='X' and g[1][0]=='-':g[1][0]='O';break
+            elif g[2][0]==g[2][1] and g[2][0]=='X' and g[2][2]=='-':g[2][2]='O';break
+            elif g[2][0]==g[2][2] and g[2][0]=='X' and g[2][1]=='-':g[2][1]='O';break
+            elif g[2][1]==g[2][2] and g[2][1]=='X' and g[2][0]=='-':g[2][0]='O';break
+            elif g[0][0]==g[1][0] and g[0][0]=='X' and g[2][0]=='-':g[2][0]='O';break
+            elif g[0][0]==g[2][0] and g[0][0]=='X' and g[1][0]=='-':g[1][0]='O';break
+            elif g[1][0]==g[2][0] and g[1][0]=='X' and g[0][0]=='-':g[0][0]='O';break
+            elif g[0][1]==g[1][1] and g[0][1]=='X' and g[2][1]=='-':g[2][1]='O';break
+            elif g[0][1]==g[2][1] and g[0][1]=='X' and g[1][1]=='-':g[1][1]='O';break
+            elif g[1][1]==g[2][1] and g[1][1]=='X' and g[0][1]=='-':g[0][1]='O';break
+            elif g[0][2]==g[1][2] and g[0][2]=='X' and g[2][2]=='-':g[2][2]='O';break
+            elif g[0][2]==g[2][2] and g[0][2]=='X' and g[1][2]=='-':g[1][2]='O';break
+            elif g[1][2]==g[2][2] and g[1][2]=='X' and g[0][2]=='-':g[0][2]='O';break
+            elif g[0][0]==g[1][1] and g[0][0]=='X' and g[2][2]=='-':g[2][2]='O';break
+            elif g[0][0]==g[2][2] and g[0][0]=='X' and g[1][1]=='-':g[1][1]='O';break
+            elif g[1][1]==g[2][2] and g[1][1]=='X' and g[0][0]=='-':g[0][0]='O';break
+            elif g[0][2]==g[1][1] and g[0][2]=='X' and g[2][0]=='-':g[2][0]='O';break
+            elif g[0][2]==g[2][0] and g[0][2]=='X' and g[1][1]=='-':g[1][1]='O';break
+            elif g[1][1]==g[2][0] and g[1][1]=='X' and g[0][2]=='-':g[0][2]='O';break
             else:
-                if grid[0]==['X','-','-'] and grid[1]==['-','O','-'] and grid[2]==['-','-','X']:grid[0][1]='O';break
-                elif grid[0]==['-','-','X'] and grid[1]==['-','O','-'] and grid[2]==['X','-','-']:grid[0][1]='O';break
-                elif grid[1][1]=='-':grid[1][1]='O';break
-                elif grid[0][0]=='-':grid[0][0]='O';break
-                elif grid[0][2]=='-':grid[0][2]='O';break
-                elif grid[2][0]=='-':grid[2][0]='O';break
-                elif grid[2][2]=='-':grid[2][2]='O';break
+                if g[0]==['X','-','-'] and g[1]==['-','O','-'] and g[2]==['-','-','X']:g[0][1]='O';break
+                elif g[0]==['-','-','X'] and g[1]==['-','O','-'] and g[2]==['X','-','-']:g[0][1]='O';break
+                elif g[1][1]=='-':g[1][1]='O';break
+                elif g[0][0]=='-':g[0][0]='O';break
+                elif g[0][2]=='-':g[0][2]='O';break
+                elif g[2][0]=='-':g[2][0]='O';break
+                elif g[2][2]=='-':g[2][2]='O';break
                 else:
-                    if grid[0][1]=='-':grid[0][1]='O';break
-                    if grid[1][0]=='-':grid[1][0]='O';break
-                    if grid[1][1]=='-':grid[1][1]='O';break
-                    if grid[1][2]=='-':grid[1][2]='O';break
-                    if grid[2][1]=='-':grid[2][1]='O';break
-        print(grid[0][0],end=' ');print(grid[0][1],end=' ');print(grid[0][2]);print(grid[1][0],end=' ');print(grid[1][1],end=' ');print(grid[1][2]);print(grid[2][0],end=' ');print(grid[2][1],end=' ');print(grid[2][2])
-        if grid[0][0]==grid[0][1]==grid[0][2] and grid[0][0]=='O':print('You lost');break
-        elif grid[1][0]==grid[1][1]==grid[1][2] and grid[1][0]=='O':print('You lost');break
-        elif grid[2][0]==grid[2][1]==grid[2][2] and grid[2][0]=='O':print('You lost');break
-        elif grid[0][0]==grid[1][0]==grid[2][0] and grid[0][0]=='O':print('You lost');break
-        elif grid[0][1]==grid[1][1]==grid[2][1] and grid[0][1]=='O':print('You lost');break
-        elif grid[0][2]==grid[1][2]==grid[2][2] and grid[0][2]=='O':print('You lost');break
-        elif grid[0][0]==grid[1][1]==grid[2][2] and grid[0][0]=='O':print('You lost');break
-        elif grid[2][0]==grid[1][1]==grid[0][2] and grid[2][0]=='O':print('You lost');break
+                    if g[0][1]=='-':g[0][1]='O';break
+                    if g[1][0]=='-':g[1][0]='O';break
+                    if g[1][1]=='-':g[1][1]='O';break
+                    if g[1][2]=='-':g[1][2]='O';break
+                    if g[2][1]=='-':g[2][1]='O';break
+        print(g[0][0],end=' ');print(g[0][1],end=' ');print(g[0][2]);print(g[1][0],end=' ');print(g[1][1],end=' ');print(g[1][2]);print(g[2][0],end=' ');print(g[2][1],end=' ');print(g[2][2])
+        if g[0][0]==g[0][1]==g[0][2] and g[0][0]=='O':print('Loss');break
+        elif g[1][0]==g[1][1]==g[1][2] and g[1][0]=='O':print('Loss');break
+        elif g[2][0]==g[2][1]==g[2][2] and g[2][0]=='O':print('Loss');break
+        elif g[0][0]==g[1][0]==g[2][0] and g[0][0]=='O':print('Loss');break
+        elif g[0][1]==g[1][1]==g[2][1] and g[0][1]=='O':print('Loss');break
+        elif g[0][2]==g[1][2]==g[2][2] and g[0][2]=='O':print('Loss');break
+        elif g[0][0]==g[1][1]==g[2][2] and g[0][0]=='O':print('Loss');break
+        elif g[2][0]==g[1][1]==g[0][2] and g[2][0]=='O':print('Loss');break
