@@ -1,5 +1,4 @@
-import random
-while True:   
+while True:
     grid=[['-','-','-'],['-','-','-'],['-','-','-']]
     while True:
         while True:
@@ -80,12 +79,11 @@ while True:
                 elif grid[2][0]=='-':grid[2][0]='O';break
                 elif grid[2][2]=='-':grid[2][2]='O';break
                 else:
-                    move=random.randint(2,8)
-                    if move==2 and grid[0][1]=='-':l=0;grid[0][1]='O';break
-                    if move==4 and grid[1][0]=='-':l=0;grid[1][0]='O';break
-                    if move==5 and grid[1][1]=='-':l=0;grid[1][1]='O';break
-                    if move==6 and grid[1][2]=='-':l=0;grid[1][2]='O';break
-                    if move==8 and grid[2][1]=='-':l=0;grid[2][1]='O';break
+                    if grid[0][1]=='-':grid[0][1]='O';break
+                    if grid[1][0]=='-':grid[1][0]='O';break
+                    if grid[1][1]=='-':grid[1][1]='O';break
+                    if grid[1][2]=='-':grid[1][2]='O';break
+                    if grid[2][1]=='-':grid[2][1]='O';break
         print(grid[0][0],end=' ');print(grid[0][1],end=' ');print(grid[0][2]);print(grid[1][0],end=' ');print(grid[1][1],end=' ');print(grid[1][2]);print(grid[2][0],end=' ');print(grid[2][1],end=' ');print(grid[2][2])
         if grid[0][0]==grid[0][1]==grid[0][2] and grid[0][0]=='O':print('You lost');break
         elif grid[1][0]==grid[1][1]==grid[1][2] and grid[1][0]=='O':print('You lost');break
