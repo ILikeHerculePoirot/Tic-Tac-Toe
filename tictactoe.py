@@ -2,8 +2,7 @@ while True:
     g=[['-','-','-'],['-','-','-'],['-','-','-']]
     while True:
         m=int(input("Enter position in which you want to place X (1-9): "))
-        while m<1 or m>9:
-            m=int(input("Enter position in which you want to place X (1-9): "))
+        while m<1 or m>9:m=int(input("Enter position in which you want to place X (1-9): "))
         if m==1 and g[0][0]=='-':g[0][0]='X'
         if m==2 and g[0][1]=='-':g[0][1]='X'
         if m==3 and g[0][2]=='-':g[0][2]='X'
